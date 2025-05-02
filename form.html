@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Contact Information:</legend>
+            <label for="name">
+                Full Name
+                <input type="text" id="name" name="contact" placeholder="name" required>
+            </label>
+            <label for="email">
+                Email
+                <input type="text" id="email" name="contact" placeholder="email" required>
+            </label>
+            <label for="password">
+                Password
+                <input type="text" id="password" name="contact" placeholder="password" minlength=8>
+            </label>
+         </fieldset>
+         <fieldset>
+            <legend>Feedback:</legend>
+            <label for="feedback-category">Feedback Category:</label>
+            <select id="feedback-category" name="feedback" required>
+                <option value="" default="true">Select</option>
+                <option value="request for contact">Request for Contact</option>
+                <option value="general">General</option>
+                <option value="leave a review">Leave a Review</option>
+            </select>
+            <legend>Preferred Contact Method:</legend>
+            <label for="email-contact">
+                <input type="radio" id="email-contact" name="contact" value="email" checked="checked"> 
+                Email
+            </label>
+            <label for="phone-contact">
+                <input type="radio" id="phone-contact" name="contact" value="phone">
+                Phone
+            </label>
+            <legend>Select Additional Interests:</legend>
+            <label for="coding">
+                <input type="checkbox" id="coding" name="interests" value="coding" checked> Coding
+            </label>
+            <label for="design">
+                <input type="checkbox" id="design" name="interests" value="design" checked> Design
+            </label>
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="interests" value="newsletter" checked> Weekly Newsletter
+            </label>
+            <legend>Provide feedback</legend>
+            <label>
+                <textarea name="feedback-box" id="feedback-textbox" placeholder="Enter your feedback here" required></textarea>
+            </label>
+         </fieldset>
+         <div>
+            <button type="submit">Submit</button>
+         </div>
+     </form>
+
+    
+</body>
+</html>
+
